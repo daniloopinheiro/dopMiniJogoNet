@@ -65,4 +65,4 @@ jobs:
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy publish/wwwroot --project-name=minijogo-net --compatibility-date=2024-01-01
+          command: pages deploy publish/wwwroot --project-name=minijogo-net
