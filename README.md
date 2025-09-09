@@ -1,4 +1,5 @@
 # dopMiniJogoNET
+[![Deploy to CloudFlare Pages](https://github.com/daniloopinheiro/dopMiniJogoNet/actions/workflows/cloudflare_pages_deploy.yml/badge.svg)](https://github.com/daniloopinheiro/dopMiniJogoNet/actions/workflows/cloudflare_pages_deploy.yml)
 
 Jogo interativo de pedra, papel e tesoura desenvolvido em C# .NET com interface colorida no console.  
 Um bom exercício para praticar decisões condicionais, loops e programação orientada a objetos em .NET.
