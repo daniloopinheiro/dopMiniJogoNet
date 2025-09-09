@@ -1,18 +1,18 @@
-# dopMiniJogoNET Game
+# dopMiniJogoNET
 
 Jogo interativo de pedra, papel e tesoura desenvolvido em C# .NET com interface colorida no console.  
 Um bom exercício para praticar decisões condicionais, loops e programação orientada a objetos em .NET.
 
 ## 📑 Índice
 
-1. [[Visão Geral](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#vis%C3%A3o-geral)](#visão-geral)
-2. [[Instalação](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#instala%C3%A7%C3%A3o)](#instalação)
-3. [[Como Usar](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#como-usar)](#como-usar)
-4. [[Configuração](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#configura%C3%A7%C3%A3o)](#configuração)
-5. [[Contribuições](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#contribui%C3%A7%C3%B5es)](#contribuições)
-6. [[Artigos & Conteúdos](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#artigos--conte%C3%BAdos)](#artigos--conteúdos)
-7. [[Licença](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#licen%C3%A7a)](#licença)
-8. [[Contato](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#contato)](#contato)
+1. [Visão Geral](#visão-geral)
+2. [Instalação](#instalação)
+3. [Como Usar](#como-usar)
+4. [Configuração](#configuração)
+5. [Contribuições](#contribuições)
+6. [Artigos & Conteúdos](#artigos--conteúdos)
+7. [Licença](#licença)
+8. [Contato](#contato)
 
 ---
 
