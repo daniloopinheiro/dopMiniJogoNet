@@ -1,4 +1,4 @@
-# dopMiniJogoNET
+# dopMiniJogoNET Game
 
 Jogo interativo de pedra, papel e tesoura desenvolvido em C# .NET com interface colorida no console.  
 Um bom exercício para praticar decisões condicionais, loops e programação orientada a objetos em .NET.
