@@ -54,8 +54,8 @@ $ dotnet --version
 
 ### Clonando o repositório
 ```bash
-$ git clone https://github.com/daniloopinheiro/dopMiniJogoPy.git
-$ cd dopMiniJogoPy
+$ git clone https://github.com/daniloopinheiro/dopMiniJogoNet.git
+$ cd dopMiniJogoNet
 ```
 
 ### Restaurando dependências
@@ -128,7 +128,7 @@ O jogo funciona diretamente após a compilação. Não requer configurações ad
 
 **Estrutura do projeto:**
 ```
-dopMiniJogoPy/
+dopMiniJogoNet/
 ├── Program.cs              # Ponto de entrada da aplicação
 ├── Models/
 │   ├── GameOption.cs       # Enum para opções do jogo
@@ -138,7 +138,7 @@ dopMiniJogoPy/
 │   └── DisplayService.cs   # Gerenciamento da interface
 ├── Utils/
 │   └── ConsoleHelper.cs    # Utilitários para console
-└── dopMiniJogoPy.csproj    # Arquivo de projeto
+└── dopMiniJogoNet.csproj    # Arquivo de projeto
 ```
 
 **Dependências utilizadas:**
