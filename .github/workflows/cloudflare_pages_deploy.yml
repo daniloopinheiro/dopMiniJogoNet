@@ -1,27 +1,36 @@
 name: Deploy to CloudFlare Pages
+
 on:
   push:
     branches: ["develop"]
   pull_request:
     branches: ["main"]
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
+          
       - name: Clean solution
-        run: dotnet clean
+        run: dotnet clean dopMiniJogoNet.sln
         
       - name: Restore dependencies
-        run: dotnet restore dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
+        run: dotnet restore dopMiniJogoNet.sln
         
-      - name: Publish Net Mvc
-        run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish
+      - name: Build project
+        run: dotnet build dopMiniJogoNet.sln -c Release --no-restore
+        
+      - name: Publish .NET MVC
+        run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish --no-build
+        
       # Criar arquivo 404.html para SPA routing
       - name: Create 404.html
         run: |
@@ -48,4 +57,4 @@ jobs:
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages deploy publish/wwwroot --project-name=minijogo-net
+          command: pages deploy publish/wwwroot --project-name=minijogo-net --compatibility-date=2024-01-01
