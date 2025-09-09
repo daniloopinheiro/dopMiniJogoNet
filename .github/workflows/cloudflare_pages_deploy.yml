@@ -20,13 +20,13 @@ jobs:
           dotnet-version: "8.0.x"
           
       - name: Clean solution
-        run: dotnet clean dopMiniJogoNet.sln
+        run: dotnet clean dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
         
       - name: Restore dependencies
-        run: dotnet restore dopMiniJogoNet.sln
+        run: dotnet restore dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
         
       - name: Build project
-        run: dotnet build dopMiniJogoNet.sln -c Release --no-restore
+        run: dotnet build dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release --no-restore
         
       - name: Publish .NET MVC
         run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish --no-build
