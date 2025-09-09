@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7Rn/STjJ26E=",
+  "dgSpecHash": "0lSZ4/QQHOs=",
   "success": true,
   "projectFilePath": "/workspaces/dopMiniJogoNet/dopMiniJogoNet.Console/dopMiniJogoNet.Console.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/vscode/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
+    "/home/vscode/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.19/microsoft.netcore.app.host.linux-x64.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }
