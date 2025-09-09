@@ -20,16 +20,13 @@ jobs:
           dotnet-version: "8.0.x"
           
       - name: Clean solution
-        run: dotnet clean dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
+        run: dotnet clean
         
       - name: Restore dependencies
         run: dotnet restore dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
         
-      - name: Build project
-        run: dotnet build dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release --no-restore
-        
       - name: Publish .NET MVC
-        run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish --no-build
+        run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish
         
       # Criar arquivo 404.html para SPA routing
       - name: Create 404.html
@@ -46,19 +43,6 @@ jobs:
               <p>Se não for redirecionado automaticamente, <a href="/">clique aqui</a>.</p>
           </body>
           </html>' > publish/wwwroot/404.html
-          
-      # Opcional: Criar _redirects para melhor handling de rotas
-      - name: Create _redirects file
-        run: |
-          echo '/*    /index.html   200' > publish/wwwroot/_redirects
-          
-      # Debug: Verificar o que foi gerado
-      - name: List publish directory contents
-        run: |
-          echo "Contents of publish directory:"
-          ls -la publish/
-          echo "Contents of publish/wwwroot directory:"
-          ls -la publish/wwwroot/
           
       - name: Deploy to CloudFlare Pages
         uses: cloudflare/wrangler-action@v3
