@@ -1,178 +1,221 @@
-# Descrição
+# dopMiniJogoNET
 
-Este é um projeto de software que tem como objetivo [inserir objetivo principal do projeto, ex: resolver um problema específico, automatizar um processo, fornecer uma funcionalidade]. Ele foi desenvolvido utilizando [listar tecnologias e ferramentas principais, ex: .NET, RabbitMQ, MongoDB, etc.] e segue uma arquitetura [ex: MVC, DDD, microserviços, etc.] para garantir [escabilidade, desempenho, manutenibilidade, etc.].
+Jogo interativo de pedra, papel e tesoura desenvolvido em C# .NET com interface colorida no console.  
+Um bom exercício para praticar decisões condicionais, loops e programação orientada a objetos em .NET.
 
----
+## 📑 Índice
 
-## Índice
-
-- [Visão Geral](#visão-geral)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Estrutura de Diretórios](#estrutura-de-diretórios)
-- [Configuração](#configuração)
-- [Contribuições](#contribuições)
-- [Licença](#licença)
-- [Contato](#contato)
+1. [[Visão Geral](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#vis%C3%A3o-geral)](#visão-geral)
+2. [[Instalação](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#instala%C3%A7%C3%A3o)](#instalação)
+3. [[Como Usar](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#como-usar)](#como-usar)
+4. [[Configuração](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#configura%C3%A7%C3%A3o)](#configuração)
+5. [[Contribuições](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#contribui%C3%A7%C3%B5es)](#contribuições)
+6. [[Artigos & Conteúdos](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#artigos--conte%C3%BAdos)](#artigos--conteúdos)
+7. [[Licença](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#licen%C3%A7a)](#licença)
+8. [[Contato](https://claude.ai/chat/51583075-28f5-49dc-9aff-5788a61d328c#contato)](#contato)
 
 ---
 
 ## Visão Geral
 
-Este projeto visa [explicar em poucas palavras o propósito do software e o valor que ele agrega]. Ele oferece as seguintes funcionalidades principais:
+O jogo de pedra, papel e tesoura é um jogo manual no qual cada jogador escolhe um dos três itens. Do ponto de vista da programação, esse desafio é um bom exercício para praticar decisões condicionais, iterações e programação orientada a objetos em C# .NET.
 
-- **Funcionalidade 1**: [Descrição breve da funcionalidade]
-- **Funcionalidade 2**: [Descrição breve da funcionalidade]
-- **Funcionalidade 3**: [Descrição breve da funcionalidade]
+**Funcionalidades principais:**
+- Interface colorida no console
+- Placar em tempo real
+- Validação de entrada do usuário
+- Opção de jogar múltiplas rodadas
+- Arquitetura limpa com separação de responsabilidades
 
-A arquitetura do projeto segue [exemplo: Domain-Driven Design (DDD)], o que garante [benefícios como flexibilidade, escalabilidade, etc.].
+**Regras do jogo:**
+- Pedra vence Tesoura
+- Tesoura vence Papel  
+- Papel vence Pedra
 
----
-
-## Tecnologias Utilizadas
-
-Este projeto foi desenvolvido com as seguintes tecnologias:
-
-- **Tecnologia 1**: [Descrição da tecnologia 1, ex: .NET 8, Java, etc.]
-- **Tecnologia 2**: [Descrição da tecnologia 2, ex: RabbitMQ, MySQL, etc.]
-- **Tecnologia 3**: [Descrição da tecnologia 3, ex: Docker, Kubernetes, etc.]
+**Recursos técnicos:**
+- .NET 8.0 ou superior
+- Console Application
+- Programação orientada a objetos
+- Enum para opções do jogo
+- Tratamento de exceções
 
 ---
 
 ## Instalação
 
 ### Pré-requisitos
+- .NET SDK 8.0 ou superior
+- IDE: Visual Studio, Visual Studio Code, ou Rider (opcional)
 
-Certifique-se de que você tem as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
+### Verificando a instalação do .NET
+```bash
+$ dotnet --version
+```
 
-- **Ferramenta 1**: [Link para o download ou instrução de instalação]
-- **Ferramenta 2**: [Link para o download ou instrução de instalação]
+### Clonando o repositório
+```bash
+$ git clone https://github.com/daniloopinheiro/dopMiniJogoPy.git
+$ cd dopMiniJogoPy
+```
 
-### Passos para Instalar
+### Restaurando dependências
+```bash
+$ dotnet restore
+```
 
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
-   cd nome-do-projeto
-   ```
-
-2. Instale as dependências do projeto:
-
-   Se estiver utilizando o Visual Studio ou VS Code, abra a solução e restaure os pacotes.
-
-   Ou, se estiver utilizando a linha de comando, execute:
-
-   ```bash
-   dotnet restore
-   ```
-
-3. [Instrução de configuração, ex: configurar o banco de dados, variáveis de ambiente, etc.]
-
-4. Para rodar o projeto localmente, use o seguinte comando:
-
-   ```bash
-   dotnet run
-   ```
-
-   Ou, se estiver usando containers Docker, execute:
-
-   ```bash
-   docker-compose up
-   ```
+### Compilando o projeto
+```bash
+$ dotnet build
+```
 
 ---
 
 ## Como Usar
 
-Este projeto pode ser utilizado para [explicar de forma prática como o usuário pode interagir com o sistema]. Exemplos de uso:
-
-1. **Endpoint 1**:
-   - **Método HTTP**: GET/POST
-   - **URL**: `/api/exemplo`
-   - **Descrição**: [Breve descrição do que esse endpoint faz]
-   
-2. **Endpoint 2**:
-   - **Método HTTP**: GET/POST
-   - **URL**: `/api/exemplo/{id}`
-   - **Descrição**: [Breve descrição do que esse endpoint faz]
-
-### Exemplos de uso com cURL ou Postman
-
-**Requisição de exemplo**:
+Execute o projeto diretamente:
 
 ```bash
-curl -X GET http://localhost:5000/api/exemplo -H "Content-Type: application/json"
+$ dotnet run
 ```
 
----
-
-## Estrutura de Diretórios
-
-A estrutura do projeto segue uma organização modular e de fácil manutenção:
-
+Ou compile e execute o executável:
+```bash
+$ dotnet build -c Release
+$ dotnet run --configuration Release
 ```
-src/
-├── API/                # Camada de apresentação (controladores e endpoints da API)
-├── Application/        # Camada de lógica de negócios
-├── Domain/             # Camada de domínio (entidades e interfaces)
-├── Infrastructure/     # Camada de infraestrutura (conexões com banco, serviços, etc.)
+
+**Como jogar:**
+1. O jogo será iniciado com uma apresentação colorida
+2. Digite sua escolha: `1` (Pedra), `2` (Papel) ou `3` (Tesoura)
+3. O computador fará sua escolha automaticamente
+4. O resultado da rodada será exibido com o placar atual
+5. Pressione `S` para continuar ou qualquer outra tecla para sair
+
+**Exemplo de execução:**
+```
+=========================================
+    🎮 PEDRA, PAPEL E TESOURA 🎮
+=========================================
+
+Bem-vindo ao jogo Pedra, Papel e Tesoura!
+Você jogará contra o computador.
+
+Regras:
+🪨 Pedra vence Tesoura
+✂️  Tesoura vence Papel
+📄 Papel vence Pedra
+
+Escolha sua jogada:
+1 - Pedra 🪨
+2 - Papel 📄
+3 - Tesoura ✂️
+
+Digite sua escolha (1-3): 1
+Você escolheu: Pedra 🪨
+Computador escolheu: Tesoura ✂️
+🎉 Você venceu esta rodada!
+
+Placar: Você 1 x 0 Computador
+
+Deseja jogar novamente? (S/N): s
 ```
 
 ---
 
 ## Configuração
 
-Este projeto exige algumas configurações adicionais, como variáveis de ambiente, arquivos de configuração ou serviços externos. As instruções de configuração podem ser encontradas abaixo:
+O jogo funciona diretamente após a compilação. Não requer configurações adicionais.
 
-### Configuração do Banco de Dados
-
-1. No arquivo `appsettings.json`, adicione suas configurações de banco de dados, por exemplo:
-
-```json
-{
-  "DatabaseSettings": {
-    "ConnectionString": "mongodb://localhost:27017",
-    "DatabaseName": "MeuBancoDeDados"
-  }
-}
+**Estrutura do projeto:**
+```
+dopMiniJogoPy/
+├── Program.cs              # Ponto de entrada da aplicação
+├── Models/
+│   ├── GameOption.cs       # Enum para opções do jogo
+│   └── GameResult.cs       # Enum para resultados
+├── Services/
+│   ├── GameEngine.cs       # Lógica principal do jogo
+│   └── DisplayService.cs   # Gerenciamento da interface
+├── Utils/
+│   └── ConsoleHelper.cs    # Utilitários para console
+└── dopMiniJogoPy.csproj    # Arquivo de projeto
 ```
 
-2. Para configuração de variáveis de ambiente, adicione as seguintes variáveis ao seu ambiente de execução:
-
-```bash
-DATABASE_URL=mongodb://localhost:27017
-SECRET_KEY=alguma_chave_secreta
-```
-
-### Configuração de API Externa (se necessário)
-
-Caso o projeto dependa de APIs externas, configure as credenciais ou chaves de acesso no arquivo de configuração.
+**Dependências utilizadas:**
+- .NET Base Class Library (System.*)
+- System.Console para interface
+- System.Random para escolhas aleatórias
 
 ---
 
 ## Contribuições
 
-Contribuições são bem-vindas! Para contribuir com o projeto, siga estas etapas:
+Contribuições são bem-vindas! Sinta-se à vontade para:
 
-1. Faça um **fork** do repositório.
-2. Crie uma nova branch para sua feature (ex: `git checkout -b feature/nova-feature`).
-3. Faça as alterações necessárias e commit (ex: `git commit -m 'Adiciona nova-feature'`).
-4. Envie as alterações para seu repositório (ex: `git push origin feature/nova-feature`).
-5. Crie um **pull request** para a branch principal do repositório original.
+- Reportar bugs através das Issues
+- Sugerir novas funcionalidades
+- Enviar Pull Requests com melhorias
+- Melhorar a documentação
+- Adicionar testes unitários
+
+**Como contribuir:**
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
+5. Abra um Pull Request
+
+**Padrões de código:**
+- Siga as convenções C# (.NET Coding Conventions)
+- Use nomes descritivos para variáveis e métodos
+- Adicione comentários XML para métodos públicos
+- Mantenha a separação de responsabilidades
+
+---
+
+## Artigos & Conteúdos
+
+* 💼 [[LinkedIn](https://www.linkedin.com/in/daniloopinheiro)](https://www.linkedin.com/in/daniloopinheiro)
+* ✍️ [[Medium](https://medium.com/@daniloopinheiro)](https://medium.com/@daniloopinheiro)
+* 💻 [[Dev.to](https://dev.to/daniloopinheiro)](https://dev.to/daniloopinheiro)
 
 ---
 
 ## Licença
 
-Este projeto está licenciado sob a Licença [Nome da Licença, ex: MIT]. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+MIT License © 2025 [[dopme.io](https://dopme.io/)](https://dopme.io) — por [[Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro/)](https://www.linkedin.com/in/daniloopinheiro/)
 
 ---
 
 ## Contato
 
-Caso tenha dúvidas ou sugestões, entre em contato:
+### 💬 Suporte Técnico
+Para questões técnicas, problemas ou sugestões:
+- **Issues**: [[GitHub Issues](https://github.com/daniloopinheiro/dopMiniJogoNet/issues)](https://github.com/daniloopinheiro/dopMiniJogoNet/issues)
+- **Discussions**: [[GitHub Discussions](https://github.com/daniloopinheiro/dopMiniJogoNet/discussions)](https://github.com/daniloopinheiro/dopMiniJogoNet/discussions)
 
-- **Email**: [dopme.io](mailto:daniloopinheiro@dopme.io)
-- **LinkedIn**: [Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro/)
+### 👨‍💻 Autor
+**Danilo O. Pinheiro**  
+Especialista em .NET, Clean Architecture e Interoperabilidade em Saúde
+
+- **Email Pessoal**: [[daniloopro@gmail.com](mailto:daniloopro@gmail.com)](mailto:daniloopro@gmail.com)
+- **Email Empresarial**: [[devsfree@devsfree.com.br](mailto:devsfree@devsfree.com.br)](mailto:devsfree@devsfree.com.br)
+- **Consultoria**: [[contato@dopme.io](mailto:contato@dopme.io)](mailto:contato@dopme.io)
+- **LinkedIn**: [[Danilo O. Pinheiro](https://www.linkedin.com/in/daniloopinheiro/)](https://www.linkedin.com/in/daniloopinheiro/)
+
+### 🏢 Empresas
+- **[[DevsFree](https://devsfree.com.br/)](https://devsfree.com.br)**: Desenvolvimento de Software
+- **[[dopme.io](https://dopme.io/)](https://dopme.io)**: Consultoria e Soluções Tecnológicas
+
+---
+
+<div align="center">
+
+**⭐ Se este projeto foi útil, deixe uma estrela no GitHub! ⭐**
+
+<p>
+Feito com ❤️ por <strong>Danilo O. Pinheiro</strong><br/>  
+<a href="https://devsfree.com.br" target="_blank">DevsFree</a> • <a href="https://dopme.io" target="_blank">dopme.io</a>  
+</p>
+
+</div>
