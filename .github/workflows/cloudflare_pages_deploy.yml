@@ -52,6 +52,14 @@ jobs:
         run: |
           echo '/*    /index.html   200' > publish/wwwroot/_redirects
           
+      # Debug: Verificar o que foi gerado
+      - name: List publish directory contents
+        run: |
+          echo "Contents of publish directory:"
+          ls -la publish/
+          echo "Contents of publish/wwwroot directory:"
+          ls -la publish/wwwroot/
+          
       - name: Deploy to CloudFlare Pages
         uses: cloudflare/wrangler-action@v3
         with:
