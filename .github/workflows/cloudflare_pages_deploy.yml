@@ -9,10 +9,10 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -20,6 +20,7 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj
+
       - name: Publish project
         run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish
       - name: Deploy to Cloudflare Pages
