@@ -27,23 +27,7 @@ jobs:
         
       - name: Publish .NET MVC
         run: dotnet publish dopMiniJogoNet.Mvc/dopMiniJogoNet.Mvc.csproj -c Release -o publish
-        
-      # Criar arquivo 404.html para SPA routing
-      - name: Create 404.html
-        run: |
-          echo '<!DOCTYPE html>
-          <html>
-          <head>
-              <meta charset="utf-8">
-              <meta http-equiv="refresh" content="0;URL=/">
-              <title>Redirecionando...</title>
-          </head>
-          <body>
-              <h1>Redirecionando...</h1>
-              <p>Se não for redirecionado automaticamente, <a href="/">clique aqui</a>.</p>
-          </body>
-          </html>' > publish/wwwroot/404.html
-          
+                 
       - name: Deploy to CloudFlare Pages
         uses: cloudflare/wrangler-action@v3
         with:
