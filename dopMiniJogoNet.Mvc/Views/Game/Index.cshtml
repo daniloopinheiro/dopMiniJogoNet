@@ -1,0 +1,34 @@
+@model dopMiniJogoNet.Mvc.Models.GameViewModel
+@{
+    ViewData["Title"] = "Pedra, Papel e Tesoura";
+}
+<h2>🎮 Pedra, Papel e Tesoura 🎮</h2>
+<p>Bem-vindo ao jogo! Você jogará contra o computador.</p>
+<form asp-action="Play" method="post">
+    <label>Escolha sua jogada:</label><br />
+    <button type="submit" name="playerChoice" value="1">Pedra 🪨</button>
+    <button type="submit" name="playerChoice" value="2">Papel 📄</button>
+    <button type="submit" name="playerChoice" value="3">Tesoura ✂️</button>
+</form>
+@if (Model.PlayerChoice != null)
+{
+    <hr />
+    <p>Você escolheu: <strong>@Model.PlayerChoice</strong></p>
+    <p>Computador escolheu: <strong>@Model.ComputerChoice</strong></p>
+    <p>
+        Resultado:
+        @if (Model.Result == dopMiniJogoNet.Mvc.Models.GameResult.Vitoria)
+        {
+            <span style="color:green">🎉 Você venceu!</span>
+        }
+        else if (Model.Result == dopMiniJogoNet.Mvc.Models.GameResult.Derrota)
+        {
+            <span style="color:red">😢 Você perdeu!</span>
+        }
+        else
+        {
+            <span style="color:gray">🤝 Empate!</span>
+        }
+    </p>
+    <p>Placar: Você <strong>@Model.PlayerScore</strong> x <strong>@Model.ComputerScore</strong> Computador</p>
+}
